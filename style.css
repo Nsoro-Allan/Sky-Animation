@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./imgs/clouds.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100dvh;
+    background-position: center;
+    background-size: cover;
+    -webkit-user-drag: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 22%;
+}
+
+.container img{
+    width: 20%;
+    -webkit-user-drag: none;
+}
+
+.rocket{
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    /* top: -10%; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rocket img{
+    width: 8%;
+    animation:float 3s linear infinite; 
+    -webkit-user-drag: none;
+}
+ 
+ @keyframes float{
+   0%, 100%{
+         transform: translateY(0rem);
+     }
+     50%{
+         transform: translateY(2rem);
+     }  
+ }
+
+ /* REsponsive Starts Here */
+ @media screen and (min-width: 200px) and (max-width: 500px) {
+    .container{
+        padding-top: 90%;
+    }
+    .container img{
+        width: 80%;
+    }
+    .rocket{
+        width: 90%;
+        left: 5%;
+        top: 10%;
+    }
+    .rocket img{
+        width: 15%;
+    }
+ }
+ /* REsponsive Ends Here */
